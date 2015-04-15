@@ -1,0 +1,105 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet"
+	type="text/css" />
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Login Page</title>
+<style type="text/css">
+#idef {
+	color: white;
+}
+
+.errorDiv {
+	background-color: gray;
+	border: 0.5px red;
+	width: 210px;
+	margin-bottom: 4px;
+}
+</style>
+<script type="text/javascript">
+	function validate() {
+		var name = document.getElementById("uname");
+		var password = document.getElementById("pass");
+		var valid = true;
+		if (name.value.length <= 0 && password.value.length <= 0) {
+			alert("Enter User Name & Password!");
+			valid = false;
+		} else if (name.value.length <= 0) {
+			alert("User Name cannot be empty!");
+			valid = false;
+		} else if (password.value.length <= 0) {
+			alert("Password cannot be empty!");
+			valid = false;
+		}
+
+		/* else {
+			if (isNaN(c) || isNaN(d)) {
+				alert("Enter a number");
+				valid = false;
+			}
+		} */
+		return valid;
+	};
+</script>
+</head>
+<body>
+
+	<div class="container-fluid" style="background-color: #D3D3D3">
+		<!-- #E0E6F9 -->
+		<div class="row" style="background-color: #999999;">
+			<!-- #003D7A -->
+			<div class="col-md-7">
+				<br>
+				<h1 id="idef">
+					<strong>Find Interest</strong>
+				</h1>
+			</div>
+			<div class="col-md-5">
+				<br>
+				
+		<form action="http://127.0.0.1:3000/myEvents/" method="get" enctype="application/x-www-form-urlencoded" class="form-inline" role="form" onsubmit="return validate();">
+					<div class="form-group">
+						<label id="idef" class="col-sm-3 control-label">User Name</label> 
+						<div class="col-sm-9">
+							
+							<input
+							type="text" class="form-control" name="uname"
+							placeholder="Enter username" id="uname"><br>
+							<br>
+							<br>
+					</div>
+					<div class="form-group">
+						<label id="idef">Password</label> <br> <input
+							type="password" class="form-control" id="pass"
+							placeholder="Enter password" name="pass"><br> <a
+							id="idef" href="<s:url action="forgotPasswordRedirect"/><h6>forgot
+								password</h6></a>
+					</div>
+					<div class="form-group">
+						<br>
+						<button type="submit" class="btn btn-primary"
+							style="background-color: #999999;">Log In</button>
+						<button type="submit" class="btn btn-primary"
+							style="background-color: #999999;"><a href="./html/signup.html">Sign Up</a></button>
+							<br>
+							<br>
+							<br>
+						<!-- #003D7A -->
+					</div>
+					<s:if test="hasActionErrors()">
+						<div class="errorDiv">
+							<s:actionerror />
+						</div>
+					</s:if>
+				</form>
+
+			</div>
+		</div>
+		
+	</div>
+
+</body>
+</html>

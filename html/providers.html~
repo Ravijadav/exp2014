@@ -1,0 +1,44 @@
+<!DOCTYPE html> <html lang='en'> 
+<head> <title>Bootstrap Example</title> 
+<meta charset='utf-8'> 
+<meta name='viewport' content='width=device-width, initial-scale=1'> 
+	<link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'> 
+		<script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script> 
+		<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script> 
+</head> 
+	<body> 
+		<div class='container' style='background-color:white;'>
+		 <br><br>
+		 <div class='col-md-8' style='background-color:white;'> 
+		 <div class='row'> 
+		 	
+		 		<h1 class='text-info'><b>Music</b> </div>  
+		 		<div class='row'> <div class='col-md-10' style='background-color:white;'><br><br> 
+		 		<font size='6' class='text-success'>Event Name:</font> <font id='eventName' size='6' class='text-info'></font> 
+		 		<br>
+		 		<font size='6' class='text-success'>Discription	:</font><font id='eventDesc' size='6' class='text-info'></font>
+		 		 <br>  <font size='6' class='text-success'>Date:</font> <font id='date' size='6' class='text-info'></font> 					<br><font size='6' class='text-success'>Organizer Name	:</font> <font id='providerName' size='6' class='text-info'>
+		 		 <br></font> <br> <font size='6' class='text-success'>Organizer MobileNo:</font> <font id='providerMobileno' size='6' class='text-info'></font>
+		 		 <br> <font size='6' class='text-success'>Organizer Web	:</font> <font id='providerSite' size='6' class='text-info'></font>
+		 		 </div>
+		<div class='row'> 
+		 		 <div class='col-md-12' style='background-color:white;' align='center'><br><br> <a href='#' class='btn btn-info btn-lg'>Find This event Interesting </a> </div>
+		<div class='row'> <div class='col-md-12' style='background-color:white;' >  <label for='comment'>Comment:</label> <textarea class='form-control' rows=5 id='comment'></textarea> </div> 
+		 		  </div> 
+		 		  
+		 		  <div class='col-md-4' style='background-color:white;'> 
+		 		  <div class="jumbotron">
+    					<h4>My first Bootstrap website!</h4>      
+    					<p>This page will grow as we add more and more components from Bootstrap...</p>      
+      				</div>
+  				<p>Abhi:this event is interesting.I am interested</p>      
+  				<p>too costly</p>      
+  				<p>I am coming</p>      
+  				
+  
+   </div>
+		 		  </div>
+		 		  
+		 		  </div>
+		 		  </body>  
+		 		  </html>

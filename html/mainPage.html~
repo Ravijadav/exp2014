@@ -1,0 +1,78 @@
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="application/json">
+
+</head>
+<body>
+<form action="http://127.0.0.1:3000/consumers" method="post" enctype="application/x-www-form-urlencoded">
+<div align="center" style="border:1px solid red">
+<h1>Welcome to MyHappenings.com</h1>
+</div>
+<br><br><br>
+<div align='center'>
+<tr>
+First Name:
+<input type="text" name="fname">
+</tr>
+<br><br>
+Last Name	:
+<input type="text" name="lname">
+<br><br>
+userName		:
+<input type="text" name="userName">
+<br><br>
+password	:
+<input type="password" name="password">
+<br><br>
+email	:
+<input type="email" name="email">
+<br><br>
+Interest1:
+<select name="interestCategory1">
+  <option value="music">music</option>
+  <option value="sports">sports</option>
+  <option value="food">food</option>
+  <option value="socialservice">socialservice</option>
+  <option value="education">education</option>
+</select>
+
+<br><br>
+Interest2:
+<select name="interestCategory2">
+  <option value="music">music</option>
+  <option value="sports">sports</option>
+  <option value="food">food</option>
+  <option value="socialservice">socialservice</option>
+  <option value="education">education</option>
+</select>
+
+<br><br>
+Interest3:
+<select name="interestCategory3">
+  <option value="music">music</option>
+  <option value="sports">sports</option>
+  <option value="food">food</option>
+  <option value="socialservice">socialservice</option>
+  <option value="education">education</option>
+</select>
+
+
+<br><br>
+<div><input type="submit" value="signup"></div>
+
+</div>
+</form>
+<br><br><br>
+<div align="center">
+<form action="http://127.0.0.1:3000/myEvents/" method="get" enctype="application/x-www-form-urlencoded">
+UserName:
+<input id="uname" type="text" name="uname">
+<br><br>
+Password:
+<input id="pass" type="text" name="pass">
+<br><br>
+<input type="submit" value="login">
+</div>
+</form>
+</body>
+</html>

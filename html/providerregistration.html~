@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>Service Provider Registration</head>
+<body>
+<h1>provide following details</h1>
+
+<form action="">
+
+Name:<br>
+<input type="text" name="name">
+<br>
+Address:<br>
+<textarea name="address"> </textarea>
+<br>
+Email-id:<br>
+<input id="email" type="email">
+<br>
+Mobile no:<br>
+<input type="number" id="mobileno">
+<br>
+Select service :<br>
+<select>
+
+<option> Electrician <option>
+<option> Plumber <option>
+<option> Laundry <option>
+<option> House-maid <option>
+<option> Paste-control <option>
+<option> House cleaning <option>
+<option> Car wash <option>
+<option> Cook <option>
+<option> Beauty <option>
+<option> Movers & Packers <option>
+
+</select>
+<br>
+Experience:<br>
+<input type="number" name="experience">
+<br>
+<input type="submit" value="Confirm">
+</form>
+
+</body>
+</html>
