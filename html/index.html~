@@ -153,7 +153,7 @@ function validateForm() {
                             <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="#" onclick="$('#signupbox').hide(); $('#loginbox').show()">Sign In</a></div>
                         </div>  
                         <div class="panel-body" >
-                            <form id="signupform"  name="signupform" action="http://127.0.0.1:3000/consumers" method="post"  enctype="application/x-www-form-urlencoded"" class="form-horizontal" role="form" onsubmit="return validateForm()">
+                            <form id="signupform"  name="signupform" action="http://52.74.104.128:3000/consumers" method="post"  enctype="application/x-www-form-urlencoded"" class="form-horizontal" role="form" onsubmit="return validateForm()">
                                 
                                 <div id="signupalert" style="display:none" class="alert alert-danger">
                                     <p>Error:</p>

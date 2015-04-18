@@ -1,0 +1,51 @@
+<html>
+<head>
+<link rel="stylesheet" href="css/bootstrap-multiselect.css"
+	type="text/css" />
+<script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {	
+		$('[name="name"]').multiselect({
+			 disableIfEmpty: true
+		});
+		
+		$("[name='headLine']").focus(function(){
+			if($(".msg").is(":hidden") == false){
+				$(".msg").hide();
+			}			
+		});
+		
+	});
+	function validate(){
+		if($('[name="name"]').val() == null){
+			alert("please choose something.");
+			return false;
+		}
+		return true;	
+	}
+</script>
+
+</head>
+
+<body>
+
+
+<form>
+
+
+
+<select class="form-control" name="name" multiple="multiple">
+
+<option value="music"> music </option>
+<option value="sports"> sports </option>
+<option value="food"> food </option> 																			</select>
+
+
+
+
+
+
+</form>
+</body>
+</html>

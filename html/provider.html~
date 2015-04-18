@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>
+<h1>Providers Registration</h1>
+</title>
+
+
+
+
+</head>
+<body>
+<form name="provider" action="" method="" >
+Category:
+<select name="interestCategory">
+  <option value="music">Music</option>
+  <option value="sports">Sports</option>
+  <option value="socialservice">SocialService</option>
+  <option value="food">Food</option>
+  <option value="education">Education</option> 
+</select>
+<br>
+Event Name:
+<label name="Event name">
+<input type="text" name="eventname" placeholder="Event Name" autocomplete="off" required>
+<br>
+Date:
+<input type="date" name="date" />
+<br>
+Time:
+<input type="time" name="time" />
+<br>
+Provider Name:
+<input type="text" name="providername" placeholder="Provider Name" autocomplete="off" required>
+<br>
+Contact Number:
+<input type="number" name="contactno" placeholder="Contact no." autocomplete="off" required>
+<br>
+Location:
+<>
+<br>
+Desription:
+<textarea name="desc">Description</textarea> 
+
+
+</form>
+</body>
+</html>
