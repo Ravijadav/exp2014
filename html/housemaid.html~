@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>housemaid</head>
+<body>
+<h1>Book your house-maid</h1>
+
+
+<form action="">
+
+Name:<br>
+<input type="text" name="name">
+<br>
+Address:<br>
+<textarea name="address"></textarea>
+<br>
+Email-id:<br>
+<input id="email" type="email">
+<br>
+Mobile no:<br>
+<input type="number" id="mobileno">
+<br>
+<input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
