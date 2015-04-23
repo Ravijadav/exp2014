@@ -1,0 +1,65 @@
+<!DOCTYPE html> 
+  <html lang='en'> 
+     <head> 
+
+        <title>Update Interest</title>
+        <meta charset='utf-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'> 
+        <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script> 
+        <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script> 
+      </head> 
+                      
+      <body>
+      
+      	<div class="container">
+  			
+  			<form role="form" id="form_id">
+  				<div class='col-md-3'>
+      				<label for="usr"><h3 class='text-info'>User Name:</h3></label>
+      				<input type="text" name="usr" class="form-control" id="usr" autocomplete="off"  required>
+    			</div>
+    			<br><br>
+    			<br><br><br><h3 class='text-info'>Please select your interset:</h3>
+    			<div class="checkbox">
+      				<label><input type="checkbox" name="interest[]" value="music"><font size=5>Music</font></label>
+    			</div>
+    			<div class="checkbox">
+      				<label><input type="checkbox" name="interest[]" value="sports"><font size=5>Sports</font></label>
+    			</div>
+    			<div class="checkbox disabled">
+      				<label><input type="checkbox" name="interest[]" value="food"><font size=5>Food</font></label>
+    			</div>
+    			<div class="checkbox">
+      				<label><input type="checkbox" name="interest[]" value="education"><font size=5>Education</font></label>
+    			</div>
+    			<div class="checkbox">
+      				<label><input type="checkbox" name="interest[]" value="socialservice"><font size=5>Social Service</font></label>
+    			</div>
+
+    			<br>	
+    			<div align="left">
+    				<button onclick="myFunction()" name="updateInterest" value="updateInterest" type='submit' class='btn btn-info' >Submit</button>
+  				</div>
+
+  				<script>
+					function myFunction() {
+						if((document.querySelectorAll('input[type="checkbox"]:checked').length)!=3){
+    						alert("You can select only 3 options.");
+    				}
+
+    				else{
+    					document.getElementById("form_id").action="http://52.74.104.128:3000/allInterestsAllLocations";
+    					document.getElementById("form_id").method="post";
+    					}
+
+					}
+				
+				</script>
+
+  			</form>
+		</div>
+
+      </body>
+
+  </html>       	
