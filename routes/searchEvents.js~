@@ -98,7 +98,7 @@ $ = cheerio.load("<!DOCTYPE html> " +
 
         
         $("#"+link).text(elem.eventName);
-        $("#"+link).attr({"href":"http://52.74.104.128:3000/providers/"+elem.eventName+"/"+user});
+        $("#"+link).attr({"href":"http://52.74.150.146:3000/providers/"+elem.eventName+"/"+user});
         $("#"+loc).text(elem.location);
         $("#"+date).text(elem.date);
         $("#"+time).text(elem.time);

@@ -23,7 +23,7 @@ var consumer=require('./consumerSchema.js');
           mongoose.disconnect(function(err){if(err){console.log(err)}});
     if(count==0){
           res.send("<h1>User does not exist</h1>"+
-                "<a href='http://52.74.104.128:3000'>Please signin to avail Services</a>");
+                "<a href='http://52.74.150.146:3000'>Please signin to avail Services</a>");
   }
 
 
@@ -48,7 +48,7 @@ var consumer=require('./consumerSchema.js');
                   
                   "      <div class='col-md-2'>"+
                   "        <br>"+
-                  "       <form  action='http://52.74.104.128:3000' enctype='application/x-www-form-urlencoded'>"+
+                  "       <form  action='http://52.74.150.146:3000' enctype='application/x-www-form-urlencoded'>"+
                   "           <button name='Logout' type='submit' class='btn btn-info'>Logout</button>" +
                   "       </form>"+
                   "       </div>"+
@@ -99,10 +99,10 @@ var consumer=require('./consumerSchema.js');
                   + "   <br><br>"
                 
                   + "<div class='row'>"
-                  + "    <form action='http://52.74.104.128:3000/allInterestsAllLocations'>"
+                  + "    <form action='http://52.74.150.146:3000/allInterestsAllLocations'>"
                   + "        <div class='col-md-3' align='center'>"    
                   + "           <button name='searchEvents' type='submit' class='btn btn-info'>Update Interest</button>"
-                  //+   "              <a href='http://52.74.104.128:3000'><button type='submit' class='btn btn-info' value='Logout'>Update Interest</button></a>"+ 
+                  //+   "              <a href='http://52.74.150.146:3000'><button type='submit' class='btn btn-info' value='Logout'>Update Interest</button></a>"+ 
                   + "         </div>"
                   
                   + "   <div class='col-md-1' style='background-color:lavenderblush'> </div>"
@@ -129,7 +129,7 @@ consumer.find({userName:user},function(err,interests){
 
     if(password!=interests[0].password){
         res.send("<h1>OOPS!Password seems to be mismatched</h1>"+
-                "<a href='http://52.74.104.128:3000'>Please login again</a>");   
+                "<a href='http://52.74.150.146:3000'>Please login again</a>");   
     }
 
     else{
@@ -158,7 +158,7 @@ consumer.find({userName:user},function(err,interests){
               else {
         		    mongoose.disconnect(function(err){if(err){console.log(err)}});
         
-        var link="http://52.74.104.128:3000/providers/";	
+        var link="http://52.74.150.146:3000/providers/";	
         $("#interest1").text(providers1[0].category);
    			$("#eventName1").text(providers1[0].eventName);
    			$("#eventName2").text(providers1[1].eventName);
@@ -166,8 +166,8 @@ consumer.find({userName:user},function(err,interests){
    			$("#event1").attr("href",link+providers1[0].eventName+"/"+user);
    			$("#event2").attr("href",link+providers1[1].eventName+"/"+user);
    			$("#event3").attr("href",link+providers1[2].eventName+"/"+user);
-        $("#allEvent1").attr("href","http://52.74.104.128:3000/viewAllHappenings/"+interest1+"/"+user+"/"+consumerLocation);
-        $("#nearEvent1").attr("href","http://52.74.104.128:3000/viewAllHappenings/"+interest1+"/"+user+"/"+nearestLocation);
+        $("#allEvent1").attr("href","http://52.74.150.146:3000/viewAllHappenings/"+interest1+"/"+user+"/"+consumerLocation);
+        $("#nearEvent1").attr("href","http://52.74.150.146:3000/viewAllHappenings/"+interest1+"/"+user+"/"+nearestLocation);
    			
    			if(providers1[0].category=='music'){
    				$("#image1").attr("src","http://icons.iconarchive.com/icons/wwalczyszyn/iwindows/512/Music-Library-icon.png");
@@ -212,8 +212,8 @@ consumer.find({userName:user},function(err,interests){
    					$("#interest2Event1").attr("href",link+providers2[0].eventName+"/"+user);
    					$("#interest2Event2").attr("href",link+providers2[1].eventName+"/"+user);
    					$("#interest2Event3").attr("href",link+providers2[2].eventName+"/"+user);
-            $("#allEvent2").attr("href","http://52.74.104.128:3000/viewAllHappenings/"+interest2+"/"+user+"/"+consumerLocation);
-   					$("#nearEvent2").attr("href","http://52.74.104.128:3000/viewAllHappenings/"+interest2+"/"+user+"/"+nearestLocation);
+            $("#allEvent2").attr("href","http://52.74.150.146:3000/viewAllHappenings/"+interest2+"/"+user+"/"+consumerLocation);
+   					$("#nearEvent2").attr("href","http://52.74.150.146:3000/viewAllHappenings/"+interest2+"/"+user+"/"+nearestLocation);
 
    	    if(providers2[0].category=='music'){
    				$("#image2").attr("src","http://icons.iconarchive.com/icons/wwalczyszyn/iwindows/512/Music-Library-icon.png");
@@ -257,8 +257,8 @@ consumer.find({userName:user},function(err,interests){
    					$("#interest3Event1").attr("href",link+providers3[0].eventName+"/"+user);
    					$("#interest3Event2").attr("href",link+providers3[1].eventName+"/"+user);
    					$("#interest3Event3").attr("href",link+providers3[2].eventName+"/"+user);
-            $("#allEvent3").attr("href","http://52.74.104.128:3000/viewAllHappenings/"+interest3+"/"+user+"/"+consumerLocation);
-   			    $("#nearEvent3").attr("href","http://52.74.104.128:3000/viewAllHappenings/"+interest3+"/"+user+"/"+nearestLocation);
+            $("#allEvent3").attr("href","http://52.74.150.146:3000/viewAllHappenings/"+interest3+"/"+user+"/"+consumerLocation);
+   			    $("#nearEvent3").attr("href","http://52.74.150.146:3000/viewAllHappenings/"+interest3+"/"+user+"/"+nearestLocation);
    			
    			if(providers3[0].category=='music'){
    				console.log("yes");

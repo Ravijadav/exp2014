@@ -101,7 +101,7 @@ $ = cheerio.load("<!DOCTYPE html> " +
 
         
         $("#"+link).text(elem.eventName);
-        $("#"+link).attr({"href":"http://52.74.104.128:3000/providers/"+elem.eventName+"/"+user});
+        $("#"+link).attr({"href":"http://52.74.150.146:3000/providers/"+elem.eventName+"/"+user});
         $("#"+loc).text(elem.location);
         $("#"+date).text(elem.date);
         $("#"+time).text(elem.time);
@@ -110,7 +110,7 @@ $ = cheerio.load("<!DOCTYPE html> " +
       });  
 
         $("#all").text(user+" below are happenings in "+interest+":");
-        $('#form_id').attr({"action":"http://52.74.104.128:3000/consumers/searchEvents/"+interest+"/"+user,
+        $('#form_id').attr({"action":"http://52.74.150.146:3000/consumers/searchEvents/"+interest+"/"+user,
                             "method":"get"});
         res.send(200,$.html());  
 });

@@ -38,7 +38,7 @@ updateInterest.post('/',function(req,res){
             }
             else{
               mongoose.disconnect();
-              var link="http://52.74.150.146:3000/myEvents/"+user;
+              var link="http://52.74.132.178:3000/myEvents/"+user;
               res.send("<h3>Interest updated succesfully</h3>");
               
             }

@@ -80,7 +80,7 @@ var newConsumer = new consumer(req.body);
 	     else{
              console.log('data inserted succesfully');
               res.send("<h1>record updated succesfully</h1>"+
-                        "<a href='http://52.74.150.146:3000'>Please login again</a>");
+                        "<a href='http://52.74.132.178:3000'>Please login again</a>");
                 	mongoose.disconnect(function(err){
                                            if(err)
                                               {console.log(err)}
