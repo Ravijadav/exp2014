@@ -57,7 +57,7 @@ provider.find({eventName:eventName},function(err,eventDetail){
           
           "                 <div class='col-md-2'>"+
           "                     <br>"+
-          "                       <a href='http://52.74.150.146:3000'><input type='button' class='btn btn-info' value='Logout'></a>"+
+          "                       <a href='http://52.74.104.128:3000'><input type='button' class='btn btn-info' value='Logout'></a>"+
           "                 </div>"+
           "              </div>"+        
 
@@ -153,7 +153,7 @@ provider.find({eventName:eventName},function(err,eventDetail){
        $('#address').text(eventDetail[0].eventAddress);
        $('#like').text("Like Event("+eventDetail[0].likes+")");
        $('#unlike').text("Unlike Event("+eventDetail[0].unlikes+")");
-       $('#form_id').attr({"action":"http://52.74.150.146:3000/providers/comments/"+eventDetail[0].eventName+"/"+user,
+       $('#form_id').attr({"action":"http://52.74.104.128:3000/providers/comments/"+eventDetail[0].eventName+"/"+user,
                             "method":"post"});
        
 

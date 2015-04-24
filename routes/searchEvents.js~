@@ -1,5 +1,5 @@
 var  express = require('express');
-var allHappenings = express.Router();	
+var searchEvents = express.Router();	
 var mongoose=require('mongoose');
 var bodyParser = require('body-parser');
 var cheerio = require('cheerio');
@@ -10,16 +10,15 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 
 
-allHappenings.get('/:interest/:user/:location',function(req,res){
+searchEvents.get('/:interest/:user',function(req,res){
     
 
-var conn=mongoose.connect('mongodb://localhost/houseServices',function(err){
-			if(err){console.log(err)}
-});   
+var conn=mongoose.connect('mongodb://localhost/houseServices');   
 var provider=require('./providerSchema.js');
 var interest=req.params.interest;
 var user=req.params.user;
-var location=req.params.location;
+var pattern=req.param('pattern');
+
 
 $ = cheerio.load("<!DOCTYPE html> " +
           "<html lang='en'>" +
@@ -41,16 +40,8 @@ $ = cheerio.load("<!DOCTYPE html> " +
           "     <div >"+
           "       <h3 id='all' class='text-success'></h3"+
           "     </div>"+
-          "    </div>"+
-          
-          "     <div align='right'>"+
-          "       <form  id='form_id' method='get' enctype='application/x-www-form-urlencoded'>"+
-          "           <input id='search' type='search' name='pattern' autocomplete='off'>"+
-          "           <button name='searchEvents' type='submit' class='btn btn-info' value='searchEvents'>Search Events</button>" +
-          "       </form>"+
-          "     </div>"+
 
-          
+          "    </div>"+
           
           "     <br>"+  
           "  <div>"+
@@ -74,9 +65,15 @@ $ = cheerio.load("<!DOCTYPE html> " +
         "</body>"+
       "</html>");
 
+    var searchPattern="/"+pattern+"/"+"i";
+
+    
+    
+    var re = new RegExp(pattern, 'i');
+
+
    	provider
-        .find({category:interest,location:location})
-        .sort('-likes')
+        .find().or([{ 'eventName': { $regex: re }}, { 'eventDesc': { $regex: re }}])
         .select('eventName eventDesc location date time likes')
         .exec(function(err,events){  
           if(err){console.log(err)}
@@ -101,7 +98,7 @@ $ = cheerio.load("<!DOCTYPE html> " +
 
         
         $("#"+link).text(elem.eventName);
-        $("#"+link).attr({"href":"http://52.74.150.146:3000/providers/"+elem.eventName+"/"+user});
+        $("#"+link).attr({"href":"http://52.74.104.128:3000/providers/"+elem.eventName+"/"+user});
         $("#"+loc).text(elem.location);
         $("#"+date).text(elem.date);
         $("#"+time).text(elem.time);
@@ -110,10 +107,8 @@ $ = cheerio.load("<!DOCTYPE html> " +
       });  
 
         $("#all").text(user+" below are happenings in "+interest+":");
-        $('#form_id').attr({"action":"http://52.74.150.146:3000/consumers/searchEvents/"+interest+"/"+user,
-                            "method":"get"});
         res.send(200,$.html());  
 });
 });
 	
-module.exports = allHappenings;
+module.exports = searchEvents;
