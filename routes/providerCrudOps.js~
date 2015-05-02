@@ -14,7 +14,7 @@ router.get('/', function(req, res, next) {
 var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 routerProvider.get('/:eventName/:user',function(req,res){
-mongoose.connect('mongodb://clouddata-2.cloud1.2971.mongodbdns.com:27000,clouddata-1.cloud1.2971.mongodbdns.com:27000,clouddata-0.cloud1.2971.mongodbdns.com:27000/houseServices');
+mongoose.connect('mongodb://localhost/houseServices');
 
 
 var provider=require('./providerSchema.js');
@@ -190,7 +190,7 @@ provider.find({eventName:eventName},function(err,eventDetail){
 
 routerProvider.get('/',function(req,res){
 
-mongoose.connect('mongodb://clouddata-2.cloud1.2971.mongodbdns.com:27000,clouddata-1.cloud1.2971.mongodbdns.com:27000,clouddata-0.cloud1.2971.mongodbdns.com:27000/houseServices');
+mongoose.connect('mongodb://localhost/houseServices');
 var provider=require('./providerSchema.js');
 	
 
@@ -212,7 +212,7 @@ provider.find({},function(err,stu){
 
 routerProvider.post('/',function(req,res){
             
-var conn=mongoose.connect('mongodb://clouddata-2.cloud1.2971.mongodbdns.com:27000,clouddata-1.cloud1.2971.mongodbdns.com:27000,clouddata-0.cloud1.2971.mongodbdns.com:27000/houseServices');   
+var conn=mongoose.connect('mongodb://localhost/houseServices');   
 var provider=require('./providerSchema.js');
 
 
@@ -232,7 +232,7 @@ var newProvider = new provider(req.body);
 
 routerProvider.delete('/:id',function(req,res){
 
-mongoose.connect('mongodb://clouddata-2.cloud1.2971.mongodbdns.com:27000,clouddata-1.cloud1.2971.mongodbdns.com:27000,clouddata-0.cloud1.2971.mongodbdns.com:27000/houseServices');   
+mongoose.connect('mongodb://localhost/houseServices');   
 var provider=require('./providerSchema.js');
 
 var id=req.params.id;
