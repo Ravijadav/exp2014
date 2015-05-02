@@ -19,7 +19,7 @@ var comments = require('./routes/comments');
 var allHappenings = require('./routes/allHappenings');
 var searchEvents = require('./routes/searchEvents');
 var allInterests=require('./routes/allInterestsAllLocations');
-//var allEventsByCategory=require('./routes/allEventsByCategory');
+var allEventsByCategory=require('./routes/allEventsByCategory');
 
 //var feedback = require('./routes/feedbackCrudOps');
 //var update = require('./routes/crudOps');
@@ -53,6 +53,6 @@ app.get('/',mainPage);
 app.use('/viewAllHappenings',allHappenings);
 app.use('/consumers/searchEvents',searchEvents);
 app.use('/allInterestsAllLocations',allInterests);
-//app.use('/providers/allEventsByCategory', allEventsByCategory);
+app.use('/providers/allEventsByCategory', allEventsByCategory);
 
 module.exports = app;	
