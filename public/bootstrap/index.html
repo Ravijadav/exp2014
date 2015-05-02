@@ -1,0 +1,236 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+
+<title>Local Service</title>
+
+<meta charset="UTF-8">
+
+<title> - Sign-Up/Login Form</title>
+<script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
+<script src="sign-up-login-form/js/index.js"></script>
+
+<!-- Include the plugin's CSS and JS: -->
+<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="sign-up-login-form/css/normalize.css">
+<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+
+
+
+
+<!--  This is for multi select dropdown -->
+<link rel="stylesheet" href="css/bootstrap-3.1.1.min.css" type="text/css" />
+<link rel="stylesheet" href="css/bootstrap-multiselect.css" type="text/css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
+<script type="text/javascript" src="js/bootstrap-2.3.2.min.js"></script>
+<script type="text/javascript" src="js/bootstrap-multiselect.js"></script>
+
+<!-- Initialize the plugin: -->
+<script type="text/javascript">
+$(function() {
+$('#interests').multiselect({
+includeSelectAllOption: true
+});
+});
+</script>
+
+
+
+<!-- Validation -->
+<script>
+function validateForm() {
+    //alert("hello");
+    var a = document.forms["signup"]["fname"].value;
+    var b = document.forms["signup"]["lname"].value; 	
+    var c = document.forms["signup"]["email"].value;
+    
+    var d = document.forms["signup"]["password"].value;
+    //var e = document.forms["signup"]["repassword"].value;
+    
+	if (a== null || a == "") {
+        alert("First name must be filled out");
+        return false;
+    } 
+    if (b== null || b == "") {
+        alert("Last name must be filled out");
+	return false;
+     }	
+	if (c== null || c == "") {
+        alert("Email must be filled out");
+        return false;
+	if(d== null || d == "" ) {
+     }	
+	alert("password should not be Empty");
+     }
+
+
+
+}
+</script>
+
+
+
+<style>
+body {
+    background-image: url("bg.jpg");
+}
+</style>
+
+</head>
+
+
+
+
+<body background="bg.jpg">
+
+
+<div style="position: relative;left: 1000px;top: 369px;">
+<a href="provider.html"><img src="event.jpg" style="width:204px;height:128px"></a>
+</div>
+
+     
+
+
+<div id="login">   
+          <h1>Welcome Back!</h1>
+	<h3>Login here!</h3>		
+
+<form name="login" class="form-inline" action="http://127.0.0.1/myEvents" method="get" onsubmit="return validateForm()">
+
+            <div class="form-group">
+            <label class="wb-inv">
+              Email Address<span class="req">*</span>
+            </label>
+            <input type="email" class="form-control" required autocomplete="off"/ style="height:35px;">
+          </div>
+
+          <div class="form-group">
+            <label class="wb-inv">
+              Password<span class="req">*</span>
+            </label>
+            <input type="pass" class="form-control" required autocomplete="off"/>
+          </div>
+
+          <p class="forgot"><a href="mail.html">Forgot Password?</a></p>
+	
+          <button class="btn btn-default" style="position:relative;left:600px;bottom:65px">Log In</button>
+	
+</form>
+
+</div>
+ 
+
+
+<hr>
+
+
+
+
+<div class="form" >
+
+               <h1>Sign Up for Free</h1>
+
+
+
+
+          
+
+<form  name:"signup" action="http://127.0.0.1/consumers" class="form-horizontal" method="post" onsubmit="return validateForm()">
+
+          <div class="top-row" >
+            <div class="field-wrap" style="position: relative;left: 50px;">
+              <label>
+                First Name<span class="req">*</span>
+              </label>
+              <input type="text" class="form-control" name="fname" required autocomplete="off" style="
+    width: 200px;
+    height: 35px;
+    position: relative;left:35px;
+"/>
+            </div>
+<br>
+            <div class="field-wrap" style="position: relative;left: 50px;">
+              <label>
+                Last Name<span class="req">*</span>
+              </label>
+              <input type="text" name="lname" required autocomplete="off" style="
+    width: 200px;
+    height: 35px;
+    position: relative;left:36px;
+"/>
+            </div> 
+          </div>
+<br>
+          <div class="field-wrap" style="position: relative;left: 50px;">
+            <label>
+              Email Address<span class="req">*</span>
+            </label>
+            <input type="email" name="email" required autocomplete="off" style="
+    width: 200px;
+    height: 35px;
+    position: relative;left:8px;
+"/>
+          </div>
+<br>
+          <div class="field-wrap" style="position: relative;left: 50px;">
+            <label>
+              Set A Password<span class="req">*</span>
+            </label>
+            <input type="password" name="password" required autocomplete="off" style="
+    width: 200px;
+    height: 35px;
+    position: relative;
+"/>
+          </div>
+	
+
+<br>
+<h3 style="
+    position: relative;
+    left: 48px;
+">Select your Interests</h3>
+
+
+<div style="padding:20px;position: relative;left: 80px;" >
+<select id="interests" name="interests"multiple="multiple"  style="position:relative;left:140px">
+<option value="music">Music</option>
+<option value="sports">Sports</option>
+<option value="food">Food</option>
+<option value="education">Education</option>
+<option value="socialservice">SocialService</option>
+
+</select><br /><br />
+	    
+</div>      		
+
+
+
+
+
+<br>
+
+
+          <button type="submit" class="button button-block" style="
+    position: relative;
+    left: 200px;
+    background-color: rgb(231, 229, 206);
+    height: 40px;
+    width: 200px;
+    color: black;
+"/>Get Started</button>
+
+</form>
+
+</div>
+
+
+      
+  
+</body>
+
+</html>

@@ -1,0 +1,224 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+
+<html>
+
+
+<head>
+
+<meta charset="UTF-8">
+
+<title> - Provider Registration Form</title>
+
+<!-- Include the plugin's CSS and JS: -->
+<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="sign-up-login-form/css/normalize.css">
+<link rel="stylesheet" href="sign-up-login-form/css/style.css">
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+
+
+
+
+
+<!-- Initialize the plugin: -->
+
+
+<script>
+function validateForm() {
+    //alert("hello");
+    var a = document.forms["provider"]["eventname"].value;
+    var b = document.forms["provider"]["date"].value; 	
+    var c = document.forms["provider"]["time"].value;
+    
+    var d = document.forms["provider"]["providername"].value;
+    var e = document.forms["provider"]["email"].value;
+    var f = document.forms["provider"]["email"].value;
+    
+	if (a== null || a == "") {
+        alert("First name must be filled out");
+        return false;
+    } 
+    if (b== null || b == "") {
+        alert("Last name must be filled out");
+	return false;
+     }	
+	if (c== null || c == "") {
+        alert("Email must be filled out");
+        return false;
+     }	
+	if(d== null || d == "" ) {
+	alert("password should not be Empty");
+     }
+
+
+
+}
+</script>
+
+
+
+
+<style>
+body {
+    background-image: url("bg1.jpg");
+}
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+
+
+  <div class="form">
+
+      
+
+      <div class="tab-content">
+        <div id="signup">   
+          <h1>Register Your Event</h1>
+
+
+
+
+          
+
+<form  name:"provider" action="http://127.0.0.1/providers" method="post" onsubmit="return validateForm()">
+
+          <div class="top-row">
+            <div class="field-wrap">
+	<label class="field-wrap">
+         Event Category
+            </label>	
+<br>
+               <select name="event" required>
+	            <option value=""></option>		
+		    <option value="music"> Music </option>
+	            <option value="sports"> Sports </option>
+	            <option value="education"> Education </option>
+	            <option value="food"> Food </option>
+	            <option value="socialservice"> Social Service </option>
+	        </select>
+            </div>
+
+
+          
+            <label class="field-wrap">
+             Location
+            </label>
+
+                  <select name="location" required>
+		    <option value=""></option>	
+	            <option value="ec1"> Electronic city phase1 </option>
+	            <option value="ec2"> Electronic city phase2 </option>
+	            <option value="marathali"> Marathali </option>
+	            <option value="kormangala"> Kormangala </option>
+	            <option value="jpnagar"> 	J P nagar </option>
+	        </select>
+
+          </div>
+
+<br>
+            <div class="field-wrap">
+
+<input type="eventname" class="form-control" name="eventname" placeholder="Event Name" autocomplete="off"  required>
+            </div>
+          </div>
+
+
+
+
+          <div class="field-wrap">
+           <label class="field-wrap">
+              Date
+            </label>
+             <input type="date" class="form-control" name="date" placeholder="Date" autocomplete="off"  required>
+          </div>
+	
+
+
+
+
+
+<div class="field-wrap">
+<label class="field-wrap">
+              Time
+            </label>
+            <input type="time" class="form-control" name="time" placeholder="Time" autocomplete="off"  required>
+     
+</div>      		
+
+
+
+<div class="field-wrap">
+                                        <input type="text" class="form-control" name="providername" placeholder="Provider Name" autocomplete="off"  required>
+
+     
+</div>      		
+
+
+<div class="field-wrap">
+                                                  <input type="email" class="form-control" name="email" placeholder="Provider Email" autocomplete="off"  required>
+     
+</div>      		
+
+
+<div class="field-wrap">
+
+                               <input type="text" class="form-control" name="contact" placeholder="Contact No." autocomplete="off"  required>
+     
+</div>      		
+
+<div class="field-wrap">
+<label class="field-wrap">
+              Event Address
+            </label>
+ <textarea name="address"></textarea>
+     
+</div>      		
+`
+
+
+<div class="field-wrap">
+<label class="field-wrap">
+              Event Description
+            </label>
+ <textarea name="desc"></textarea>
+     
+</div>      		
+
+
+
+
+<br>
+
+
+          <button type="submit" class="button button-block"/>Register</button>
+
+</form>
+
+</div>
+
+     
+
+
+
+      </div><!-- tab-content -->
+
+</div> <!-- /form -->
+
+  <script src='http://codepen.io/assets/libs/fullpage/jquery.js'></script>
+
+  <script src="sign-up-login-form/js/index.js"></script>
+
+</body>
+
+</html>

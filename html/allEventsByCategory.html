@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+  <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js'></script>
+</head>
+<body>
+
+<div class='container'>
+  <form role='form' method='get'>
+    <div class='form-group'>
+        <div class='col-md-4'>
+              <label for='category'><h3 class='text-info'>Please select your Category:</h3></label>
+              
+              <br><select class='form-control' name='category'>
+                <option value='music'>Music</option>
+                <option value='sports'>Sports</option>
+                <option value='socialservice'>SocialService</option>
+                <option value='food'>Food</option>
+                <option value='education'>Education</option> 
+              </select>
+
+        </div>
+
+        <div class='col-md-2'>
+        </div>
+          
+        <div class='col-md-4'>
+              <label for='category'><h3 class='text-info'>Please select your Region:</h3></label>
+              
+              <br><select class='form-control' name="location" required>
+                       <option value="Electronic city phase1">Electronic city phase1</option>
+                       <option value="Electronic city phase2"> Electronic city phase2 </option>
+                       <option value="marathali"> Marathali </option>
+                       <option value="kormangala"> Kormangala </option>
+                       <option value="jpnagar">   J P nagar </option>
+                   </select>
+         </div>
+         
+
+         <div >
+                    <br><br><br><br><br><br><br><br><button type='submit' class='btn btn-info' >Submit</button>
+         </div>             
+    
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
