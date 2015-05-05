@@ -10,7 +10,7 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 
 router.get('/:id',function(req,res){
-    mongoose.connect('mongodb://localhost/houseServices',function(err){
+    mongoose.connect('mongodb://clouddata-2.cloud1.2971.mongodbdns.com:27000,clouddata-1.cloud1.2971.mongodbdns.com:27000,clouddata-0.cloud1.2971.mongodbdns.com:27000/houseServices',function(err){
       if(err){
         console.log(err);
       }
@@ -38,7 +38,7 @@ customer.find({_id:id},function(err,stu){
 
 router.get('/',function(req,res){
 
-mongoose.connect('mongodb://localhost/houseServices',function(err){
+mongoose.connect('mongodb://clouddata-2.cloud1.2971.mongodbdns.com:27000,clouddata-1.cloud1.2971.mongodbdns.com:27000,clouddata-0.cloud1.2971.mongodbdns.com:27000/houseServices',function(err){
   if(err){
     console.log(err);
   }
@@ -64,7 +64,7 @@ customer.find({},function(err,stu){
 
 router.post('/',function(req,res){
      
-var conn=mongoose.connect('mongodb://localhost/houseServices',function(err){
+var conn=mongoose.connect('mongodb://clouddata-2.cloud1.2971.mongodbdns.com:27000,clouddata-1.cloud1.2971.mongodbdns.com:27000,clouddata-0.cloud1.2971.mongodbdns.com:27000/houseServices',function(err){
   if(err){
     console.log(err);
   }
@@ -93,7 +93,7 @@ consumer.count({"userName":userName},function(err,count){
 
     else{
 
-        mongoose.connect('mongodb://localhost/houseServices',function(err){
+        mongoose.connect('mongodb://clouddata-2.cloud1.2971.mongodbdns.com:27000,clouddata-1.cloud1.2971.mongodbdns.com:27000,clouddata-0.cloud1.2971.mongodbdns.com:27000/houseServices',function(err){
             if(err){
               console.log(err);
             }
@@ -136,7 +136,7 @@ consumer.count({"userName":userName},function(err,count){
 
 router.delete('/:id',function(req,res){
 
-mongoose.connect('mongodb://localhost/houseServices');   
+mongoose.connect('mongodb://clouddata-2.cloud1.2971.mongodbdns.com:27000,clouddata-1.cloud1.2971.mongodbdns.com:27000,clouddata-0.cloud1.2971.mongodbdns.com:27000/houseServices');   
 var customer=require('./customerSchema.js');
 
 var id=req.params.id;

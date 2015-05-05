@@ -114,7 +114,7 @@ consumer.count({"userName":userName},function(err,count){
 	if(err){console.log(err) }
 	     else{
              console.log('data inserted succesfully');
-              res.send("<h1>Consumer data inserted Succesfully.</h1>"+
+              res.send("<h1>Congratulation! You have signup successfully.</h1>"+
                         "<a href='http://project-939413137.ap-southeast-1.elb.amazonaws.com'>Please login again</a>");
                 	mongoose.disconnect(function(err){
                                            if(err)

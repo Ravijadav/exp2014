@@ -222,8 +222,8 @@ var newProvider = new provider(req.body);
  newProvider.save(function(err){
 	if(err){console.log(err) }
 	else{console.log(req.body);
-             res.send("<h1 >Organizer data succesfully Enterered</h1>"+
-                   "<a href='http://project-939413137.ap-southeast-1.elb.amazonaws.com'>Click to geto Back</a>"); 
+             res.send("<h1 >Congratulation! Event registration successful.</h1>"+
+                   "<a href='http://project-939413137.ap-southeast-1.elb.amazonaws.com'>Click to goto Homepage.</a>"); 
              mongoose.disconnect(function(err){if(err){console.log(err)}})}
 
 });
