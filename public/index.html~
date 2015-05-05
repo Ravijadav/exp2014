@@ -114,9 +114,9 @@ body {
             <input type="password" name="pass" class="form-control" required autocomplete="off"/ style="height:35px">
           </div>
 
-          <p class="forgot"><a href="mail.html">Forgot Password?</a></p>
+
 	
-          <button type="submit" class="btn btn-default" style="position:relative;left:600px;bottom:65px">Log In</button>
+          <button type="submit" class="btn btn-default" style="position:relative;left: 51px;bottom: 0px;color:blue">Log In</button>
 	
 </form>
 
