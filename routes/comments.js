@@ -30,7 +30,7 @@ if(operation=="post")
             }
 
         else{
-        	res.redirect("javascript:history.back()");
+        	res.redirect("http://project-939413137.ap-southeast-1.elb.amazonaws.com/providers/"+eventN+"/"+user);
         	mongoose.disconnect(function(err){if(err){console.log(err)}});
         }
 
@@ -46,8 +46,7 @@ else if(operation=="like"){
 
               var index=eventDetails[0].likesDetails.indexOf(user);
                 if(index>=0){
-                  res.send("<h1>OOPS!You have already liked the Event.</h1>"+
-                               "<a href='javascript:history.back()''>Go To Previous Page</a>"); 
+                  res.send("<h1>OOPS!You have already liked the Event.</h1>");
                   mongoose.disconnect(function(err){
                                 if(err){
                                   console.log(err);
@@ -66,7 +65,7 @@ else if(operation=="like"){
                                   console.log(err);
                                 }
                               });
-                              res.redirect("javascript:history.back()");
+                              res.redirect("http://project-939413137.ap-southeast-1.elb.amazonaws.com/providers/"+eventN+"/"+user);
                               
                           }
                       });
@@ -76,23 +75,38 @@ else if(operation=="like"){
 
 
 else if(operation=="unlike"){
-  provider.update({eventName:eventN},{$inc:{unlikes:1}},
-          function(err){
-            if(err){
-             console.log(err)
-            }
+  provider.find({eventName:eventN})
+          .select('eventName unlikes unlikesDetails')
+          .exec(function(err,eventDetails){
 
-        else{
-            res.redirect("javascript:history.back()");
-  
-          mongoose.disconnect(function(err){
+              var index=eventDetails[0].unlikesDetails.indexOf(user);
+                if(index>=0){
+                  res.send("<h1>OOPS!You have already unliked the Event.</h1>");
+                  mongoose.disconnect(function(err){
                                 if(err){
                                   console.log(err);
                                 }
                               });
-        }
+                }
 
-    });
+                else{
+                  provider.update({eventName:eventN},{$inc:{unlikes:1},$push:{unlikesDetails:user}},function(err){
+                        if(err){
+                         console.log(err)}
+                         
+                         else{
+                              mongoose.disconnect(function(err){
+                                if(err){
+                                  console.log(err);
+                                }
+                              });
+                              res.redirect("http://project-939413137.ap-southeast-1.elb.amazonaws.com/providers/"+eventN+"/"+user);
+                              
+                          }
+                      });
+                    }
+              })
+  
 }
 });
 

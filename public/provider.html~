@@ -64,7 +64,7 @@ body {
 <body>
 <div class="form">
     <h1>Register Your Event</h1>
-    <form  name:"provider" action="http://127.0.0.1:3000/providers" method="post" onsubmit="return validateForm()">
+    <form  name:"provider" action="http://project-939413137.ap-southeast-1.elb.amazonaws.com/providers" method="post" onsubmit="return validateForm()">
 
           <div class="top-row">
               <div class="field-wrap">
